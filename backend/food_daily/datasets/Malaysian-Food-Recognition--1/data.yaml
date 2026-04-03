@@ -1,0 +1,24 @@
+names:
+- Anchovies
+- Boiled-Egg
+- Cucumber
+- Fried-Chicken
+- Fried-Egg
+- Keropok
+- Peanuts
+- Rendang-Chicken
+- Rice
+- Sambal
+
+nc: 10
+
+roboflow:
+  license: CC BY 4.0
+  project: malaysian-food-recognition-xxeio
+  url: https://universe.roboflow.com/fyp-uip0p/malaysian-food-recognition-xxeio/dataset/1
+  version: 1
+  workspace: fyp-uip0p
+
+train: train/images
+val: valid/images
+test: test/images

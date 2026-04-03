@@ -1,0 +1,402 @@
+.risk-food-diary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  min-height: calc(100vh - 80px);
+  font-family: 'Arial', sans-serif;
+}
+
+.risk-food-diary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.risk-food-diary-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.log-meal-button {
+  background-color: #4c7a50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.log-meal-button:hover {
+  background-color: #3a5d3d;
+}
+
+/* Weekly Risk Summary */
+.weekly-risk-summary {
+  background-color: #fafbf5;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  margin-bottom: 40px;
+  width: 1200px;
+  box-sizing: border-box;
+}
+
+.risk-summary-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.risk-summary-header p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.risk-summary-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .risk-summary-content {
+    flex-direction: column;
+  }
+}
+
+/* Risk Gauge with Circular Progress */
+.risk-gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.risk-circle {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-chart {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 4.5;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 4.5;
+  stroke: #f5bd41;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.percentage {
+  fill: #333;
+  font-size: 15px;
+  text-anchor: middle;
+  font-weight: bold;
+  dominant-baseline: middle;
+}
+
+.risk-label {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #f5bd41;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Risk Advice */
+.risk-advice {
+  flex: 1;
+  line-height: 2.0;
+  color: #555;
+  font-size: 16px;
+  min-width: 420px;
+  min-height: 120px;
+  padding-left: 24px;
+}
+
+.risk-advice ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.risk-advice li {
+  margin-bottom: 8px;
+}
+
+/* Meal History */
+.meal-history {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: none;
+  margin-bottom: 30px;
+}
+
+.meal-history h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.meal-history h3 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.meal-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.meal-card {
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #ececec;
+  min-width: 365px;
+  max-width: 420px;
+}
+
+.meal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.meal-card-header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  padding-right: 32px;
+}
+
+.meal-card-header h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.meal-time {
+  background: #f5f3e7;
+  color: #bba96b;
+  border-radius: 12px;
+  font-size: 1em;
+  padding: 2px 12px;
+  margin-left: 8px;
+  min-width: 48px;
+  text-align: center;
+}
+
+.meal-card-content {
+  padding: 0;
+}
+
+.meal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.meal-placeholder-image {
+  width: 100%;
+  height: 180px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.meal-ingredients {
+  padding: 15px 20px;
+  color: #555;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+.meal-ingredients p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.nutrition-info-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nutrition-info-modal {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.nutrition-info-modal table th,
+.nutrition-info-modal table td {
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.nutrition-info-modal table th {
+  background: #f5f5f5;
+}
+
+.delete-checkbox {
+  accent-color: #f44336;
+  border-radius: 4px;
+  border: 1.5px solid #f44336;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.ai-summary-loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-summary-loading-modal {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spinner {
+  border: 6px solid #eee;
+  border-top: 6px solid #4caf50;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.risk-circle.rotating {
+  animation: rotate 1s linear infinite;
+}
+
+.circular-chart .circle.processing {
+  stroke: #4caf50;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-dasharray: 30, 100;
+  transition: none;
+}
+
+.circular-chart .circle {
+  fill: none;
+  stroke-width: 4.5;
+  stroke: #f5bd41;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.6s ease, stroke 0.3s ease;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.risk-label.processing {
+  color: #ff9800;
+  font-weight: 700;
+}
+
+.risk-advice.processing p {
+  color: #ff9800;
+}
+
+.meal-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

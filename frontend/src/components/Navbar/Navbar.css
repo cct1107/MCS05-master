@@ -1,0 +1,85 @@
+.navbar {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-item a:hover {
+  color: #4CAF50;
+}
+
+.navbar-item.active a {
+  color: #4CAF50;
+  font-weight: 600;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 5px;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-user span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+}

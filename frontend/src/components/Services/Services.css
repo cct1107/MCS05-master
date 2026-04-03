@@ -1,0 +1,153 @@
+.services-page {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Shared theme */
+:root {
+  --cream: #faf7f0;
+  --pastel-green: #dff3e3;
+  --accent-green: #4CAF50;
+  --text: #333;
+  --muted: #666;
+  --shadow: 0 2px 10px rgba(0,0,0,0.06);
+  --radius: 12px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  max-width: 800px;
+  margin: 10px auto 30px;
+}
+
+.features-section {
+  background: var(--cream);
+  padding: 60px 20px 40px;
+}
+
+.technology-section {
+  background: #fff;
+  padding: 50px 20px 80px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.cards-grid {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .cards-grid { grid-template-columns: 1fr; }
+}
+
+.service-card {
+  display: grid;
+  grid-template-rows: auto 220px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid #f2f2f2;
+}
+
+.service-card .card-header {
+  padding: 24px;
+}
+
+.service-card h3 { font-size: 22px; margin-bottom: 10px; color: var(--text); }
+.service-card p { color: var(--muted); margin-bottom: 12px; }
+
+.card-list { margin: 8px 0 16px; color: var(--text); }
+.card-list li { margin: 6px 0; position: relative; padding-left: 22px; }
+.card-list li::before {
+  content: "✔";
+  color: var(--accent-green);
+  position: absolute;
+  left: 0;
+}
+
+.card-button {
+  display: inline-block;
+  background: #4c7a50;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.card-button:hover { background: #3a5d3d; }
+
+.card-media {
+  background: var(--pastel-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-media img {
+  width: 90%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.media-placeholder { display: flex; gap: 10px; }
+.media-dot { width: 8px; height: 8px; background: #bfe6cb; border-radius: 50%; }
+
+/* Technology cards */
+.tech-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.tech-card-header {
+  background: var(--cream);
+  padding: 22px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.tech-icon { font-size: 20px; color: var(--accent-green); margin-bottom: 8px; }
+.tech-card-header h3 { font-size: 20px; margin-bottom: 8px; color: var(--text); }
+.tech-card-header p { color: var(--muted); }
+
+.tech-card-media { background: #fff; padding: 18px; display: flex; justify-content: center; }
+.diagram { width: 100%; max-width: 420px; height: 160px; border-radius: 8px; background: repeating-linear-gradient(45deg,#e8f5ea,#e8f5ea 10px,#f6f6f6 10px,#f6f6f6 20px); }
+.diagram-rag { box-shadow: inset 0 0 0 2px #cde8d6; }
+.diagram-pe { box-shadow: inset 0 0 0 2px #e3e3e3; }
+
+.foods-table-bg {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+  margin: 0 22px 18px 22px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.foods-table-list {
+  columns: 2;
+  font-size: 1rem;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.tech-card-header {
+  background: var(--cream);
+  padding: 22px;
+  border-bottom: 1px solid #f3f3f3;
+}
